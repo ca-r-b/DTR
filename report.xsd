@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="report">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="halfOfMonth" minOccurs="1" maxOccurs="2">
+                <xs:complexType>
+                <xs:sequence>
+                        <xs:element name="day" minOccurs="1" maxOccurs="15">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="timein" type="xs:time"/>
+                                    <xs:element name="timeout" type="xs:time"/>
+                                    <xs:element name="is_absent" type="xs:boolean"/>
+                                    <xs:element name="is_restDay" type="xs:boolean"/>
+                                    <xs:element name="hrsRendered" type="xs:float"/>
+                                </xs:sequence>
+                                <xs:attribute name="date" type="xs:date"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
